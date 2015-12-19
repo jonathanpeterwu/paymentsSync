@@ -79,13 +79,13 @@ Endpoints
 
 **paymentSync.stripe**
 
-  paymentSync.stripe.account.create(projectObject, callback);
+    paymentSync.stripe.account.create(projectObject, callback);
 
-  paymentSync.stripe.account.info(projectObject, callback);
+    paymentSync.stripe.account.info(projectObject, callback);
 
-  paymentSync.stripe.transaction.create(projectObject, callback);
+    paymentSync.stripe.transaction.create(projectObject, callback);
 
-  paymentSync.stripe.transaction.info(projectObject, callback);
+    paymentSync.stripe.transaction.info(projectObject, callback);
 
 
 Contribute
