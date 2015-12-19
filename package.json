@@ -1,0 +1,42 @@
+{
+  "author": {
+    "name": "Johnny Wu",
+    "email": "jonathan.x.wu@gmail.com"
+  },
+  "name": "paymentSync",
+  "description": "Payment Sync Module to sync payment APIs",
+  "version": "0.1.01",
+  "homepage": "https://github.com/jonathanpeterwu/paymentSync",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jonathanpeterwu/paymentSync.git"
+  },
+  "contributors": [
+    {
+      "name": "Johnny Wu",
+      "email": "jonathan.x.wu@gmail.com"
+    }
+  ],
+  "keywords": [
+    "payments",
+    "bitcoin",
+    "coinbase",
+    "dwolla",
+    "stripe",
+    "plaid"
+  ],
+  "main": "lib/main.js",
+  "dependencies": {
+    "request": "~2.53.0",
+    "moment": "^2.10.6"
+  },
+  "devDependencies": {},
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6"
+  },
+  "bugs": {
+    "url": "https://github.com/jonathanpeterwu/paymentSync/issues"
+  },
+  "readme": "Go to https://github.com/jonathanpeterwu/paymentSync/README.md to read more"
+}
