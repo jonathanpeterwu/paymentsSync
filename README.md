@@ -4,9 +4,13 @@ NPM Module for payment providers
 Building an open source Node module to provide access to some of the following APIs:
 
 [Plaid](https://plaid.com/docs/)
+
 [Coinbase](https://developers.coinbase.com/)
+
 [Dwolla](https://developers.dwolla.com/)
+
 [Stripe](https://stripe.com/docs)
+
 .. More to come
 
 
@@ -27,12 +31,17 @@ Endpoints
 ----------
 
 - All callbacks are passed an error and response: `callback(err, res)`.
+
 - Supports camelCase and underscore naming conventions (Textmaster uses the underscore convention).
+
 - Please refer to the API docs for each provider:
 
 [Plaid API Docs](https://plaid.com/docs/) for endpoint details.
+
 [Coinbase API Docs](https://developers.coinbase.com/api/v2) for endpoint details.
+
 [Dwolla API Docs](https://docsv2.dwolla.com/) for endpoint details.
+
 [Stripe API Docs](https://stripe.com/docs/api) for endpoint details
 
 **paymentSync.plaid**
@@ -41,7 +50,7 @@ Endpoints
 
     paymentSync.plaid.account.authenticate(account, callback);
 
-    paymentSync.plaid.account.info(callback);
+    paymentSync.plaid.account.balance(callback);
 
     paymentSync.plaid.transaction.create(projectObject, callback);
 
