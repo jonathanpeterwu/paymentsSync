@@ -24,7 +24,7 @@ TODO
 Quick Links to Subsections
 ----------
 
-[Plaid](#Plaid)
+#Plaid
 
 [Stripe API]()
 
