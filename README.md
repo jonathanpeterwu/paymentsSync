@@ -111,7 +111,9 @@ Endpoints
 
     paymentSync.plaid.institution.list(callback);
 
-    {}
+    {
+      
+    }
 
     paymentSync.plaid.instituion.info(data, callback);
 
