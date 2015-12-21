@@ -23,12 +23,18 @@
     "coinbase",
     "dwolla",
     "stripe",
-    "plaid"
+    "plaid",
+    "synapsepay"
   ],
   "main": "lib/main.js",
   "dependencies": {
+    "coinbase": "^2.0.0",
+    "dwolla-node": "^1.1.3",
+    "moment": "^2.10.6",
+    "plaid": "^1.0.8",
     "request": "~2.53.0",
-    "moment": "^2.10.6"
+    "stripe": "^4.1.0",
+    "synapsepay": "0.0.3"
   },
   "devDependencies": {},
   "license": "MIT",
