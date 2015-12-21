@@ -192,6 +192,14 @@ Endpoints
       id: fundingListId
     }
 
+    paymentSync.dwolla.funding.verify(data, callback);
+
+    {
+      id: customerId
+    }
+
+    POST /customers/99bfb139-eadd-4cdf-b346-7504f0c16c60/iav-token
+
     paymentSync.dwolla.transfer.create(data, callback);
 
     {
@@ -222,6 +230,26 @@ Endpoints
 
     {
       id: accountId
+    }
+
+    paymentSync.dwolla.document.create(data, callback);
+
+    {
+      documentType: type, // 'passport' || 'driversLicense' || 'idCard' || 'other'
+      file: fileContents
+    }
+
+    paymentSync.dwolla.document.list(data, callback);
+
+    {
+      id: customerId
+    }
+
+    paymentSync.dwolla.document.info(data, callback);
+
+    {
+      id: customerId,
+      documentId: documentId
     }
 
 ![coinbase](./images/coinbase.png)
