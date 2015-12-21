@@ -44,6 +44,9 @@ Endpoints
 
 [Stripe API Docs](https://stripe.com/docs/api) for endpoint details
 
+
+![plaid](./images/plaid.jpg)
+
 **paymentSync.plaid**
 
     paymentSync.plaid.account.create(account, callback);
@@ -56,6 +59,9 @@ Endpoints
 
     paymentSync.plaid.transaction.info(projectObject, callback);
 
+
+![plaid](./images/coinbase.png)
+
 **paymentSync.coinbase**
 
     paymentSync.coinbase.account.create(projectObject, callback);
@@ -66,6 +72,7 @@ Endpoints
 
     paymentSync.coinbase.transaction.info(projectObject, callback);
 
+![plaid](./images/dwolla.png)
 
 **paymentSync.dwolla**
 
@@ -76,6 +83,8 @@ Endpoints
     paymentSync.dwolla.transaction.create(projectObject, callback);
 
     paymentSync.dwolla.transaction.info(projectObject, callback);
+
+![plaid](./images/stripe.png)
 
 **paymentSync.stripe**
 
