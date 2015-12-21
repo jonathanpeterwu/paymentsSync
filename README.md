@@ -3,6 +3,9 @@ NPM Module for payment providers
 
 Building an open source Node module to provide access to some of the following APIs:
 
+Direct links to docs
+---------
+
 [Plaid](https://plaid.com/docs/)
 
 [Coinbase](https://developers.coinbase.com/)
@@ -14,6 +17,22 @@ Building an open source Node module to provide access to some of the following A
 [SynapsePay](http://synapsepay.com/)
 
 .. More to come
+
+TODO
+[ ] http://interactive.yodlee.com/products/account-verification-api
+
+Quick Links to Subsections
+----------
+
+[Plaid](#Plaid)
+
+[Stripe API]()
+
+[Synapse API]()
+
+[Dwolla API]()
+
+[Coinbase API]()
 
 
 Installation
@@ -48,11 +67,15 @@ Endpoints
 
 [Synapse Pay Docs](http://docs.synapsepay.com/) for endpoint details
 
+###Plaid
+
 ![plaid](./images/plaid.jpg)
 
 **paymentSync.plaid**
 
-    paymentSync.plaid.account.create(data, callback);
+paymentSync.plaid.account.create(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       clint_id: clientId,
@@ -66,7 +89,9 @@ Endpoints
       }
     }
 
-    paymentSync.plaid.account.mfa(data, callback);
+paymentSync.plaid.account.mfa(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       client_id: clientId,
@@ -75,7 +100,9 @@ Endpoints
       access_token: accessToken
     }
 
-    paymentSync.plaid.account.info(data, callback);
+paymentSync.plaid.account.info(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       client_id: clientId,
@@ -84,7 +111,9 @@ Endpoints
     }
 
 
-    paymentSync.plaid.account.balance(data, callback);
+paymentSync.plaid.account.balance(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       client_id: clientId,
@@ -93,7 +122,9 @@ Endpoints
     }
 
 
-    paymentSync.plaid.account.update(data, callback);
+paymentSync.plaid.account.update(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       client_id: clientId,
@@ -104,7 +135,9 @@ Endpoints
     }
 
 
-    paymentSync.plaid.account.delete(data, callback);
+paymentSync.plaid.account.delete(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       client_id: clientId,
@@ -112,30 +145,40 @@ Endpoints
       access_token: access_token
     }
 
-    paymentSync.plaid.institution.list(callback);
+paymentSync.plaid.institution.list(callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
 
     }
 
-    paymentSync.plaid.institution.info(data, callback);
+paymentSync.plaid.institution.info(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       id: institutionId
     }
 
-    paymentSync.plaid.account.exchangeToken(data, callback);
+paymentSync.plaid.account.exchangeToken(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       access_token: access_token,
       client_id: clientId
     }
 
+### Dwolla API ###
+
 ![dwolla](./images/dwolla.png)
 
 **paymentSync.dwolla**
 
-    paymentSync.dwolla.account.create(data, callback);
+paymentSync.dwolla.account.create(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       firstName: 'Johnny',
@@ -151,20 +194,26 @@ Endpoints
       phone: 1234567890
     }
 
-    paymentSync.dwolla.account.info(data, callback);
+paymentSync.dwolla.account.info(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       id: accountId
     }
 
-    paymentSync.dwolla.account.auth(data, callback);
+paymentSync.dwolla.account.auth(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       grant_type: 'grant_type',
       scope: 'balance|accountinfofull|send|request|transactions|contacts|funding|manageaccount|scheduled|managecustomers',
     }
 
-    paymentSync.dwolla.account.refreshAuth(data, callback);
+paymentSync.dwolla.account.refreshAuth(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       client_id: clientId,
@@ -173,7 +222,9 @@ Endpoints
       grant_type: grantType // 'client_credentials' || 'referesh_token'
     }
 
-    paymentSync.dwolla.funding.create(data, callback);
+paymentSync.dwolla.funding.create(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       id: fundingSourceId,
@@ -183,26 +234,34 @@ Endpoints
       name: 'B of A checking'
     }
 
-    paymentSync.dwolla.funding.info(data, callback);
+paymentSync.dwolla.funding.info(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       id: fundingSourceId
     }
 
-    paymentSync.dwolla.funding.list(data, callback);
+paymentSync.dwolla.funding.list(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       id: fundingListId
     }
 
-    paymentSync.dwolla.funding.verify(data, callback);
+paymentSync.dwolla.funding.verify(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       id: customerId
     }
 
 
-    paymentSync.dwolla.transfer.create(data, callback);
+paymentSync.dwolla.transfer.create(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       \_links: 'https://api.dwolla.com/funding-sources/fundingSourceId',
@@ -216,63 +275,106 @@ Endpoints
       }
     }
 
-    paymentSync.dwolla.transfer.get(data, callback);
+paymentSync.dwolla.transfer.get(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       id: transferId
     }
 
-    paymentSync.dwolla.transfer.customer(data, callback);
+paymentSync.dwolla.transfer.customer(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       id: customerId
     }
 
-    paymentSync.dwolla.transfer.account(data, callback);
+paymentSync.dwolla.transfer.account(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       id: accountId
     }
 
-    paymentSync.dwolla.document.create(data, callback);
+paymentSync.dwolla.document.create(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       documentType: type, // 'passport' || 'driversLicense' || 'idCard' || 'other'
       file: fileContents
     }
 
-    paymentSync.dwolla.document.list(data, callback);
+paymentSync.dwolla.document.list(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       id: customerId
     }
 
-    paymentSync.dwolla.document.info(data, callback);
+paymentSync.dwolla.document.info(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
     {
       id: customerId,
       documentId: documentId
     }
 
+### Coinbase API ###
+
+
 ![coinbase](./images/coinbase.png)
 
     **paymentSync.coinbase**
 
-    paymentSync.coinbase.account.create(data, callback);
+paymentSync.coinbase.account.create(data, callback);
 
-    paymentSync.coinbase.account.info(data, callback);
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
 
-    paymentSync.coinbase.transaction.create(data, callback);
+    {
+      id: id
+    }
 
-    paymentSync.coinbase.transaction.info(data, callback);
+paymentSync.coinbase.account.info(data, callback);
 
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
+
+    {
+      id: id
+    }
+
+paymentSync.coinbase.transaction.create(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
+
+    {
+      id: id
+    }
+
+paymentSync.coinbase.transaction.info(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
+
+    {
+      id: id
+    }
+
+
+### Stripe API ###
 
 ![stripe](./images/stripe.png)
 
 **paymentSync.stripe**
 
-    paymentSync.stripe.account.create(data, callback);
+paymentSync.stripe.account.create(data, callback);
 
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
+Â
     {
       description: 'Customer account for johnny@wu.com',
       source: "tok_17KCtL2eZvKYlo2CYK3Rybdr", // obtained with Stripe.js
@@ -284,13 +386,144 @@ Endpoints
       }
     }
 
-    paymentSync.stripe.account.info(data, callback);
+paymentSync.stripe.account.info(data, callback);
 
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
+Â
     {
       id: customerId
     }
 
-    paymentSync.stripe.transaction.create(data, callback);
+paymentSync.stripe.transaction.create(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
+Â
+    {
+      amount: 400,
+      currency: "usd",
+      source: "tok_17KCtL2eZvKYlo2CYK3Rybdr", // obtained with Stripe.js
+      description: "Charge for johnny@wu.com"  
+    }
+
+
+paymentSync.stripe.transaction.info(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
+Â
+    {
+      id: chargeId
+    }
+
+### Synapse API ###
+
+![Synapse Pay](./images/synapse.png)
+
+**paymentSync.synapse**
+
+paymentSync.synapse.account.create(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/create-user)
+
+    {
+      logins: [{
+         "email": "johnny@wu.com",
+         "password": password,
+         "read_only": false
+       }],
+       phone_numbers: ["123.456.7890"],
+       legal_names: ["Johnny Wu"],
+       extra: {
+         note: "Interesting user",
+         supplier_id: "122eddfgbeafrfvbbb",
+         is_business: false
+       }
+    }
+
+paymentSync.synapse.account.info(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/get-user)
+
+
+    {
+      id: userId
+    }
+
+paymentSync.synapse.account.update(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/get-user)
+
+    {
+      id: userId,
+      update: {
+        login: {
+          email: "test2@email.com",
+          password: "test1234",
+          read_only: true
+          },
+        remove_login:{
+          email:"test2@email.com"
+        },
+        phone_number:"9019411111",
+        remove_phone_number:"9019411111",
+        legal_name:"Some new name"
+      }
+    }
+
+paymentSync.synapse.account.document.virtual(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/add-virtual-doc)
+
+    {
+      id: userId,
+      doc: {
+        birth_day:4,
+        birth_month:2,
+        birth_year:1940,
+        name_first:"John",
+        name_last:"doe",
+        address_street1:"1 Infinate Loop",
+        address_postal_code:"95014",
+        address_country_code:"US",
+        document_value:"3333",
+        document_type:"SSN"
+      }
+    }
+
+paymentSync.synapse.account.document.upload(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/add-physical-doc)
+
+    {
+      id: userId,
+      doc: {
+        "attachment": "data:text/csv;base64,SUQs=="
+      }
+    }
+
+
+paymentSync.synapse.account.verification(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
+
+    {
+      id: userId,
+      doc : {
+        "question_set_id":"557520ad343463000300005a",
+        "answers":[
+          { "question_id": 1, "answer_id": 1 },
+          { "question_id": 2, "answer_id": 1 },
+          { "question_id": 3, "answer_id": 1 },
+          { "question_id": 4, "answer_id": 1 },
+          { "question_id": 5, "answer_id": 1 }
+        ]
+      }
+    }
+
+
+paymentSync.synapse.transaction.create(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
+
 
     {
       amount: 400,
@@ -300,94 +533,14 @@ Endpoints
     }
 
 
-    paymentSync.stripe.transaction.info(data, callback);
+paymentSync.synapse.transaction.info(data, callback);
+
+[API Reference](https://docs.synapsepay.com/docs/answer-kba)
+
 
     {
       id: chargeId
     }
-
-
-![Synapse Pay](./images/synapse.png)
-
-**paymentSync.synapse**
-
-  paymentSync.synapse.account.create(data, callback);
-
-  {
-    logins: [{
-       "email": "johnny@wu.com",
-       "password": password,
-       "read_only": false
-     }],
-     phone_numbers: ["123.456.7890"],
-     legal_names: ["Johnny Wu"],
-     extra: {
-       note: "Interesting user",
-       supplier_id: "122eddfgbeafrfvbbb",
-       is_business: false
-     }
-  }
-
-  paymentSync.synapse.account.info(data, callback);
-
-  {
-    id: userId
-  }
-
-
-  paymentSync.synapse.account.update(data, callback);
-
-  {
-    id: userId,
-    update: {
-      login: {
-        email: "test2@email.com",
-        password: "test1234",
-        read_only: true
-        },
-      remove_login:{
-        email:"test2@email.com"
-      },
-      phone_number:"9019411111",
-      remove_phone_number:"9019411111",
-      legal_name:"Some new name"
-    }
-  }
-
-  paymentSync.synapse.account.documents(data, callback);
-
-  {
-    id: userId,
-    doc: {
-      birth_day:4,
-      birth_month:2,
-      birth_year:1940,
-      name_first:"John",
-      name_last:"doe",
-      address_street1:"1 Infinate Loop",
-      address_postal_code:"95014",
-      address_country_code:"US",
-      document_value:"3333",
-      document_type:"SSN"
-    }
-  }
-
-
-  paymentSync.synapse.transaction.create(data, callback);
-
-  {
-    amount: 400,
-    currency: "usd",
-    source: "tok_17KCtL2eZvKYlo2CYK3Rybdr", // obtained with Stripe.js
-    description: "Charge for johnny@wu.com"  
-  }
-
-
-  paymentSync.synapse.transaction.info(data, callback);
-
-  {
-    id: chargeId
-  }
 
 
 Contribute
