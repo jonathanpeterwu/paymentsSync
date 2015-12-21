@@ -3,7 +3,7 @@
     "name": "Johnny Wu",
     "email": "jonathan.x.wu@gmail.com"
   },
-  "name": "paymentSync",
+  "name": "payment-sync",
   "description": "Payment Sync Module to sync payment APIs",
   "version": "0.1.01",
   "homepage": "https://github.com/jonathanpeterwu/paymentSync",

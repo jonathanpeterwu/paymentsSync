@@ -11,6 +11,8 @@ Building an open source Node module to provide access to some of the following A
 
 [Stripe](https://stripe.com/docs)
 
+[SynapsePay](http://synapsepay.com/)
+
 .. More to come
 
 
@@ -44,6 +46,7 @@ Endpoints
 
 [Stripe API Docs](https://stripe.com/docs/api) for endpoint details
 
+[Synapse Pay Docs](http://docs.synapsepay.com/) for endpoint details
 
 ![plaid](./images/plaid.jpg)
 
@@ -198,7 +201,6 @@ Endpoints
       id: customerId
     }
 
-    POST /customers/99bfb139-eadd-4cdf-b346-7504f0c16c60/iav-token
 
     paymentSync.dwolla.transfer.create(data, callback);
 
@@ -303,6 +305,89 @@ Endpoints
     {
       id: chargeId
     }
+
+
+![Synapse Pay](./images/synapse.png)
+
+**paymentSync.synapse**
+
+  paymentSync.synapse.account.create(data, callback);
+
+  {
+    logins: [{
+       "email": "johnny@wu.com",
+       "password": password,
+       "read_only": false
+     }],
+     phone_numbers: ["123.456.7890"],
+     legal_names: ["Johnny Wu"],
+     extra: {
+       note: "Interesting user",
+       supplier_id: "122eddfgbeafrfvbbb",
+       is_business: false
+     }
+  }
+
+  paymentSync.synapse.account.info(data, callback);
+
+  {
+    id: userId
+  }
+
+
+  paymentSync.synapse.account.update(data, callback);
+
+  {
+    id: userId,
+    update: {
+      login: {
+        email: "test2@email.com",
+        password: "test1234",
+        read_only: true
+        },
+      remove_login:{
+        email:"test2@email.com"
+      },
+      phone_number:"9019411111",
+      remove_phone_number:"9019411111",
+      legal_name:"Some new name"
+    }
+  }
+
+  paymentSync.synapse.account.documents(data, callback);
+
+  {
+    id: userId,
+    doc: {
+      birth_day:4,
+      birth_month:2,
+      birth_year:1940,
+      name_first:"John",
+      name_last:"doe",
+      address_street1:"1 Infinate Loop",
+      address_postal_code:"95014",
+      address_country_code:"US",
+      document_value:"3333",
+      document_type:"SSN"
+    }
+  }
+
+
+  paymentSync.synapse.transaction.create(data, callback);
+
+  {
+    amount: 400,
+    currency: "usd",
+    source: "tok_17KCtL2eZvKYlo2CYK3Rybdr", // obtained with Stripe.js
+    description: "Charge for johnny@wu.com"  
+  }
+
+
+  paymentSync.synapse.transaction.info(data, callback);
+
+  {
+    id: chargeId
+  }
 
 
 Contribute
