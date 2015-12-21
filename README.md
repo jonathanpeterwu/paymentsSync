@@ -24,15 +24,15 @@ TODO
 Quick Links to Subsections
 ----------
 
-#Plaid
+[Plaid](#Plaid)
 
-[Stripe API]()
+[Stripe API](#Stripe)
 
-[Synapse API]()
+[Synapse API](#Synapse)
 
-[Dwolla API]()
+[Dwolla API](#Dwolla)
 
-[Coinbase API]()
+[Coinbase API](#Coinbase)
 
 
 Installation
@@ -67,7 +67,7 @@ Endpoints
 
 [Synapse Pay Docs](http://docs.synapsepay.com/) for endpoint details
 
-###Plaid
+#Plaid
 
 ![plaid](./images/plaid.jpg)
 
@@ -170,7 +170,7 @@ paymentSync.plaid.account.exchangeToken(data, callback);
       client_id: clientId
     }
 
-### Dwolla API ###
+#Dwolla
 
 ![dwolla](./images/dwolla.png)
 
@@ -325,7 +325,7 @@ paymentSync.dwolla.document.info(data, callback);
       documentId: documentId
     }
 
-### Coinbase API ###
+#Coinbase
 
 
 ![coinbase](./images/coinbase.png)
@@ -365,7 +365,7 @@ paymentSync.coinbase.transaction.info(data, callback);
     }
 
 
-### Stripe API ###
+#Stripe
 
 ![stripe](./images/stripe.png)
 
@@ -414,7 +414,7 @@ paymentSync.stripe.transaction.info(data, callback);
       id: chargeId
     }
 
-### Synapse API ###
+#Synapse
 
 ![Synapse Pay](./images/synapse.png)
 
