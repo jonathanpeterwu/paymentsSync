@@ -38,9 +38,9 @@ Endpoints
 
 [Plaid API Docs](https://plaid.com/docs/) for endpoint details.
 
-[Coinbase API Docs](https://developers.coinbase.com/api/v2) for endpoint details.
-
 [Dwolla API Docs](https://docsv2.dwolla.com/) for endpoint details.
+
+[Coinbase API Docs](https://developers.coinbase.com/api/v2) for endpoint details.
 
 [Stripe API Docs](https://stripe.com/docs/api) for endpoint details
 
@@ -112,27 +112,21 @@ Endpoints
     paymentSync.plaid.institution.list(callback);
 
     {
-      
+
     }
 
-    paymentSync.plaid.instituion.info(data, callback);
+    paymentSync.plaid.institution.info(data, callback);
 
     {
       id: institutionId
     }
 
+    paymentSync.plaid.account.exchangeToken(data, callback);
 
-![coinbase](./images/coinbase.png)
-
-**paymentSync.coinbase**
-
-    paymentSync.coinbase.account.create(data, callback);
-
-    paymentSync.coinbase.account.info(data, callback);
-
-    paymentSync.coinbase.transaction.create(data, callback);
-
-    paymentSync.coinbase.transaction.info(data, callback);
+    {
+      access_token: access_token,
+      client_id: clientId
+    }
 
 ![dwolla](./images/dwolla.png)
 
@@ -213,6 +207,18 @@ Endpoints
     {
       id: accountId
     }
+
+![coinbase](./images/coinbase.png)
+
+    **paymentSync.coinbase**
+
+    paymentSync.coinbase.account.create(data, callback);
+
+    paymentSync.coinbase.account.info(data, callback);
+
+    paymentSync.coinbase.transaction.create(data, callback);
+
+    paymentSync.coinbase.transaction.info(data, callback);
 
 
 ![stripe](./images/stripe.png)
