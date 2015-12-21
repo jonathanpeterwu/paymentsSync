@@ -154,6 +154,22 @@ Endpoints
       id: accountId
     }
 
+    paymentSync.dwolla.account.auth(data, callback);
+
+    {
+      grant_type: 'grant_type',
+      scope: 'balance|accountinfofull|send|request|transactions|contacts|funding|manageaccount|scheduled|managecustomers',
+    }
+
+    paymentSync.dwolla.account.refreshAuth(data, callback);
+
+    {
+      client_id: clientId,
+      client_secret: clientSecret,
+      refresh_token: refreshToken,
+      grant_type: grantType // 'client_credentials' || 'referesh_token'
+    }
+
     paymentSync.dwolla.funding.create(data, callback);
 
     {
