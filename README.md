@@ -24,15 +24,15 @@ TODO
 Quick Links to Subsections
 ----------
 
-[Plaid](#Plaid)
+[Plaid](#user-content-plaid)
 
-[Stripe API](#Stripe)
+[Stripe](#user-content-stripe)
 
-[Synapse API](#Synapse)
+[Synapse](#user-content-synapse)
 
-[Dwolla API](#Dwolla)
+[Dwolla](#user-content-dwolla)
 
-[Coinbase API](#Coinbase)
+[Coinbase](#user-content-coinbase)
 
 
 Installation
