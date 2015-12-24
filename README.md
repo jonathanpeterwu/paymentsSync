@@ -20,6 +20,18 @@ Direct links to docs
 
 TODO
 [ ] http://interactive.yodlee.com/products/account-verification-api
+[ ] Braintree
+[ ] checkr
+[ ] bitcoin id
+
+Userflows
+----------
+
+TODOS
+
+[ ] Build user flow to allow developers to sync to services together
+   - EX: (plaid bank authentication) w/ dwolla payment transfers
+   - EX: (background check checkr) w/ payment hold
 
 Quick Links to Subsections
 ----------
